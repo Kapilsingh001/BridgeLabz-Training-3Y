@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form action="#" method="post">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <br><br>
+
+        <label for="position">Position Applied For:</label>
+        <select id="position" name="position" required>
+            <option value="" disabled selected>Select Position</option>
+            <option value="developer">Web Developer</option>
+            <option value="designer">Web Designer</option>
+            <option value="tester">Software Tester</option>
+        </select>
+
+        <br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+        <br><br>
+
+        <label for="cover">Cover Letter:</label>
+        <br>
+        <textarea
+            id="cover"
+            name="cover"
+            rows="6"
+            cols="45"
+            placeholder="Write your cover letter">
+        </textarea>
+
+        <br><br>
+
+        <input type="submit" value="Apply Now">
+
+    </form>
+
+</body>
+</html>
