@@ -1,0 +1,182 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+/* Header */
+header {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background-color: #172554;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+
+    padding: 60px 5%;
+}
+
+/*
+   CSS Grid creates multiple columns.
+   Three equal columns are used on large screens.
+*/
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+/*
+   Each gallery item acts as a container
+   for the image and caption.
+*/
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 280px;
+
+    margin: 0;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+    background-color: #111827;
+}
+
+/* Gallery images */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /*
+       Smooth scaling animation.
+    */
+    transition: transform 0.4s ease;
+}
+
+/*
+   Caption overlay.
+   It is positioned absolutely over the image.
+*/
+.gallery-item figcaption {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    /*
+       Caption is hidden initially.
+    */
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+/*
+   Hovering over the image:
+   1. Image scales to 1.1
+   2. Caption becomes visible
+*/
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover figcaption {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #111827;
+    color: white;
+}
+
+/*
+   Responsive design:
+   Two columns on medium-sized screens.
+*/
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*
+   Responsive design:
+   One column on small screens.
+*/
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    main {
+        padding: 40px 8%;
+    }
+}
