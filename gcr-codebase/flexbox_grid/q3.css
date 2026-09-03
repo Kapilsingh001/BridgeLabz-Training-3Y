@@ -1,0 +1,104 @@
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    /* Flexbox keeps the footer at the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background-color: #222;
+}
+
+/* Navigation links are spaced evenly */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main section */
+main {
+    flex: 1;
+
+    /* Three boxes are aligned horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+/* Individual boxes */
+.box {
+    flex: 1;
+    min-height: 200px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    /* Smooth rotation effect */
+    transition: transform 0.3s;
+}
+
+/* Rotate box slightly on hover */
+.box:hover {
+    transform: rotate(2deg);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 700px) {
+
+    main {
+        flex-direction: column;
+        padding: 30px 8%;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

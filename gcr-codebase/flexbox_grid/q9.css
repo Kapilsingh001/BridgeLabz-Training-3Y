@@ -1,0 +1,97 @@
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    /* Flexbox centers the card on the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5f5f5;
+}
+
+/* Provides perspective for the 3D card flip */
+.card-container {
+    width: 320px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+/* Main card */
+.card {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    /* Preserves the 3D effect */
+    transform-style: preserve-3d;
+
+    /* Smooth flipping transition */
+    transition: transform 0.8s ease;
+}
+
+/* Flip the card 180 degrees on hover */
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+/* Common styling for both sides */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    /* Hide the back side when it is facing away */
+    backface-visibility: hidden;
+}
+
+/* Front side */
+.card-front {
+    background-color: white;
+}
+
+.card-front img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Back side */
+.card-back {
+    background-color: #222;
+    color: white;
+
+    /* Initially rotated so it appears after the flip */
+    transform: rotateY(180deg);
+}
+
+.card-back h2 {
+    margin-bottom: 20px;
+}
+
+.card-back p {
+    line-height: 1.6;
+}

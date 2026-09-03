@@ -1,0 +1,59 @@
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px 6%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Responsive photo gallery using CSS Grid */
+.gallery {
+    display: grid;
+
+    /* Automatically adjusts the number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    /* Equal spacing between grid items */
+    gap: 25px;
+}
+
+/* Figure containing image and caption */
+figure {
+    margin: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Images completely fill their grid cell */
+figure img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    /* Smooth zoom effect */
+    transition: transform 0.5s ease;
+}
+
+/* Slight zoom on hover */
+figure:hover img {
+    transform: scale(1.05);
+}
+
+/* Image caption */
+figcaption {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}

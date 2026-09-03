@@ -1,0 +1,71 @@
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    /* Flexbox centers the animation horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5f5f5;
+}
+
+/* Loading animation container */
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Common styling for all three circles */
+.circle {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    background-color: #333;
+
+    /* Infinite up-and-down animation */
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Delay for the first circle */
+.circle1 {
+    animation-delay: 0s;
+}
+
+/* Delay for the second circle */
+.circle2 {
+    animation-delay: 0.2s;
+}
+
+/* Delay for the third circle */
+.circle3 {
+    animation-delay: 0.4s;
+}
+
+/* Controls the up-and-down movement */
+@keyframes loading {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

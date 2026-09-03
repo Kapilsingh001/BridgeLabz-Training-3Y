@@ -1,0 +1,166 @@
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Main blog layout using CSS Grid */
+.blog-layout {
+    min-height: 100vh;
+
+    display: grid;
+
+    /* Sidebar and main content columns */
+    grid-template-columns: 220px 1fr;
+
+    /* Header, content and footer rows */
+    grid-template-rows: auto 1fr auto;
+
+    /* Required spacing between grid items */
+    gap: 20px;
+
+    padding: 20px;
+
+    /* Structure the layout using grid-template-areas */
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+/* Header */
+header {
+    grid-area: header;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #222;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 25px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar */
+aside {
+    grid-area: sidebar;
+
+    padding: 25px;
+
+    background-color: white;
+    border-radius: 8px;
+}
+
+aside h2 {
+    margin-bottom: 20px;
+}
+
+aside ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+aside a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* Main content */
+main {
+    grid-area: main;
+
+    display: grid;
+
+    /* Two blog posts side-by-side */
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+/* Blog posts */
+article {
+    padding: 25px;
+
+    background-color: white;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive layout below 800px */
+@media (max-width: 800px) {
+
+    .blog-layout {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto 1fr auto;
+
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    /* Blog posts remain side-by-side on medium screens */
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 550px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
