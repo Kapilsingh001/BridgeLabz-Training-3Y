@@ -1,0 +1,114 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #222;
+    min-height: 100vh;
+
+    /* Flexbox creates the page structure */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main content */
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+/* Arrange all three cards in a single row */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Common styling for cards */
+.card {
+    width: 280px;
+    min-height: 230px;
+
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 12px;
+    text-align: center;
+
+    /* Smooth transition for hover effect */
+    transition: all 0.4s ease;
+}
+
+/* Card heading with text shadow */
+.card h2 {
+    margin-bottom: 18px;
+
+    /* Text shadow creates depth */
+    text-shadow: 2px 2px 4px #aaa;
+}
+
+/* Card paragraph */
+.card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* First card - soft shadow */
+.card-one {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Second card - deeper shadow */
+.card-two {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Third card - wide shadow */
+.card-three {
+    box-shadow: 5px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect - card lifts up and gets a larger shadow */
+.card:hover {
+    transform: translateY(-12px);
+
+    /* Larger shadow creates a stronger depth effect */
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styling */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}

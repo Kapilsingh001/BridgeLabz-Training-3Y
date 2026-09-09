@@ -1,0 +1,214 @@
+/* =========================================================
+   BASIC PAGE STYLING
+   ========================================================= */
+
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Common section styling */
+.selector-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.selector-section h2 {
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+
+/* =========================================================
+   ATTRIBUTE SELECTORS
+   ========================================================= */
+
+/* Selects only input elements whose type is "text" */
+input[type="text"] {
+    border: 3px solid #2563eb;
+    background-color: #eff6ff;
+}
+
+/* Selects links whose href starts with "https" */
+a[href^="https"] {
+    color: #15803d;
+    font-weight: bold;
+}
+
+
+/* Form styling */
+.form-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-area input {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PSEUDO-CLASSES
+   ========================================================= */
+
+/* :hover changes the appearance when the mouse is over an item */
+.item-list li:hover {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    cursor: pointer;
+}
+
+/* :focus styles an input when it is selected */
+input:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+/* :nth-child() selects the third list item */
+.item-list li:nth-child(3) {
+    background-color: #fef3c7;
+    font-weight: bold;
+}
+
+
+/* List styling */
+.item-list {
+    list-style-position: inside;
+}
+
+.item-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   PSEUDO-ELEMENTS
+   ========================================================= */
+
+/* ::before adds content before the heading */
+.selector-section h2::before {
+    content: "★ ";
+    color: #f59e0b;
+}
+
+/* ::after adds content after the heading */
+.selector-section h2::after {
+    content: " ✓";
+    color: #16a34a;
+}
+
+
+/* =========================================================
+   COMBINATORS
+   ========================================================= */
+
+/* Descendant combinator:
+   Selects every paragraph inside .parent */
+.parent p {
+    color: #475569;
+}
+
+/* Child combinator (>):
+   Selects only paragraphs that are direct children of .parent */
+.parent > p {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Adjacent sibling combinator (+):
+   Selects the span immediately after a paragraph */
+.parent p + span {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* General sibling combinator (~):
+   Selects span elements that appear after a paragraph
+   and share the same parent */
+.parent p ~ span {
+    text-decoration: underline;
+}
+
+
+/* Combinator demonstration box */
+.parent {
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.nested {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #e0f2fe;
+    border-radius: 6px;
+}
+
+
+/* Links */
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}

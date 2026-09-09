@@ -1,0 +1,117 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+
+    /* Flexbox creates the main page layout */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main section */
+main {
+    flex: 1;
+    padding: 30px 20px;
+}
+
+/* Flexbox centers the boxes horizontally and vertically */
+.box-container {
+    min-height: 65vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Common styling for all boxes */
+.box {
+    padding: 20px;
+    border: 3px solid #1f2937;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Box 1 - Pixel units */
+.box-one {
+    width: 250px;
+    height: 180px;
+
+    /* Distinct background color */
+    background-color: #dbeafe;
+}
+
+/* Box 2 - Percentage and em units */
+.box-two {
+    width: 30%;
+    height: 12em;
+
+    /* Distinct background color */
+    background-color: #dcfce7;
+}
+
+/* Box 3 - Percentage and vh units */
+.box-three {
+    width: 25%;
+    height: 35vh;
+
+    /* Minimum height */
+    min-height: 220px;
+
+    /* Maximum width */
+    max-width: 300px;
+
+    /* Controls content that exceeds the box */
+    overflow: auto;
+
+    /* Distinct background color */
+    background-color: #fef3c7;
+}
+
+/* Heading inside boxes */
+.box h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+/* Paragraph spacing */
+.box p {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}

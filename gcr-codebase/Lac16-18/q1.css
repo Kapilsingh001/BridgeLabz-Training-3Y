@@ -1,0 +1,123 @@
+/* Remove default spacing and set the basic font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+
+    /* Flexbox is used to create the page layout */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main section takes the available space */
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+/* Flexbox aligns all boxes horizontally */
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Common styling for all boxes */
+.box {
+    width: 220px;
+    min-height: 190px;
+    background-color: white;
+    text-align: center;
+
+    /* Different padding values are applied to individual boxes */
+    border-width: 3px;
+    border-color: #2563eb;
+
+    /* Smooth transition for the hover effect */
+    transition: border-color 0.4s ease;
+}
+
+/* Solid border with 20px padding */
+.solid-border {
+    border-style: solid;
+    padding: 20px;
+}
+
+/* Dashed border with 30px padding */
+.dashed-border {
+    border-style: dashed;
+    padding: 30px;
+}
+
+/* Double border with 15px padding */
+.double-border {
+    border-style: double;
+    border-width: 5px;
+    padding: 15px;
+}
+
+/* Groove border with rounded corners and 25px padding */
+.groove-border {
+    border-style: groove;
+    border-width: 5px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+/* Heading inside each box */
+.box h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Paragraph inside each box */
+.box p {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* Text showing the border information */
+.box span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hover effect changes the border color */
+.box:hover {
+    border-color: #e11d48;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}

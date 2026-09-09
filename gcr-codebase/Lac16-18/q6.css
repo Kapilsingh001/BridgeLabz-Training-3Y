@@ -1,0 +1,120 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+
+    /* Flexbox creates the page layout */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main content */
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+/* Arrange the transformation boxes horizontally */
+.transform-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Keeps each box and its label together */
+.transform-item {
+    text-align: center;
+    width: 150px;
+}
+
+/* Common styling for all transformation boxes */
+.box {
+    width: 130px;
+    height: 130px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+    border-radius: 10px;
+    background-color: #2563eb;
+
+    /*
+        All transformations happen smoothly over
+        0.4 seconds when the mouse hovers over a box.
+    */
+    transition: all 0.4s ease;
+}
+
+/* Rotate transformation */
+.rotate-box:hover {
+    transform: rotate(45deg);
+}
+
+/* Scale transformation */
+.scale-box:hover {
+    transform: scale(1.3);
+}
+
+/* Translate transformation */
+.translate-box:hover {
+    transform: translate(25px, -20px);
+}
+
+/* Skew transformation */
+.skew-box:hover {
+    transform: skew(15deg, 10deg);
+}
+
+/* Labels under the boxes */
+.transform-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
