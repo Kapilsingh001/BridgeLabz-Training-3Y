@@ -1,0 +1,176 @@
+/* Apply border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #f8fafc;
+
+    color: #1f2937;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Header and footer */
+header,
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+header h1,
+footer p {
+    margin: 0;
+}
+
+
+/* Main animation area */
+.animation-area {
+
+    flex: 1;
+
+    min-height: 550px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 55px;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   ANIMATION 1 — MOVING BOX
+   ================================= */
+
+.animated-box {
+
+    width: 130px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+
+/* Define moving-box animation */
+@keyframes moveBox {
+
+    from {
+        transform: translateX(-180px);
+    }
+
+    to {
+        transform: translateX(180px);
+    }
+
+}
+
+
+/* =================================
+   ANIMATION 2 — BOUNCING BALL
+   ================================= */
+
+.ball {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #f59e0b;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 11px;
+
+    animation: bounce 1s ease-in-out infinite alternate;
+
+    animation-delay: 0.4s;
+}
+
+
+/* Define bouncing animation */
+@keyframes bounce {
+
+    from {
+        transform: translateY(-45px);
+    }
+
+    to {
+        transform: translateY(45px);
+    }
+
+}
+
+
+/* =================================
+   ANIMATION 3 — ANIMATED TEXT
+   ================================= */
+
+.color-text {
+
+    animation: textEffect 2.5s ease-in-out infinite;
+
+    animation-direction: alternate;
+
+    animation-iteration-count: infinite;
+}
+
+
+/* Define text animation */
+@keyframes textEffect {
+
+    0% {
+
+        opacity: 0.4;
+
+        transform: scale(0.9);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1.15);
+
+    }
+
+}

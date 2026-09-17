@@ -1,0 +1,225 @@
+/* Apply border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #1f2937;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Header and footer */
+header,
+footer {
+    text-align: center;
+
+    padding: 22px;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+
+header p,
+footer p {
+    margin: 0;
+}
+
+
+/* =================================
+   BUTTON CONTAINER
+   ================================= */
+
+.button-container {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    padding: 50px 20px 25px;
+}
+
+
+/* Common button styling */
+.btn {
+
+    padding: 13px 25px;
+
+    border: 2px solid transparent;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =================================
+   PRIMARY BUTTON
+   ================================= */
+
+.primary {
+
+    background: #2563eb;
+
+    color: white;
+}
+
+
+.primary:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+.primary:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =================================
+   SECONDARY BUTTON
+   ================================= */
+
+.secondary {
+
+    background: #16a34a;
+
+    color: white;
+}
+
+
+.secondary:hover {
+
+    background: #15803d;
+}
+
+
+/* =================================
+   OUTLINE BUTTON
+   ================================= */
+
+.outline {
+
+    background: white;
+
+    color: #2563eb;
+
+    border-color: #2563eb;
+}
+
+
+.outline:hover {
+
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =================================
+   FOCUS STATE
+   ================================= */
+
+.btn:focus {
+
+    outline: 3px solid #f59e0b;
+
+    outline-offset: 3px;
+}
+
+
+/* =================================
+   DISABLED STATE
+   ================================= */
+
+.btn:disabled {
+
+    background: #cbd5e1;
+
+    color: #64748b;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =================================
+   EXPLANATION SECTION
+   ================================= */
+
+.info {
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 10px;
+}
+
+
+.info p {
+
+    margin: 7px 0;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+@media (max-width: 600px) {
+
+    .button-container {
+
+        flex-direction: column;
+    }
+
+
+    .btn {
+
+        width: 220px;
+    }
+
+}
