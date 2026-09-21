@@ -1,0 +1,291 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page styling */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background-color: #222;
+    color: white;
+}
+
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+.navigation {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.navigation a {
+    color: white;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.navigation a:hover {
+    color: #b8dfff;
+}
+
+
+/* Main content */
+.main-content {
+    flex: 1;
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 40px 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Main sections */
+.content-section {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    animation: fadeIn 1s ease forwards;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Hover transition */
+.content-section:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Section headings */
+.content-section h1 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+
+    margin-bottom: 20px;
+}
+
+
+/* Paragraphs */
+.content-section p {
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+
+/* Image gallery */
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.gallery figure {
+    text-align: center;
+}
+
+
+/* Gallery images */
+.gallery img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    filter: grayscale(70%);
+
+    transition: filter 0.4s ease,
+                transform 0.4s ease;
+}
+
+
+/* Remove filter and slightly enlarge image */
+.gallery img:hover {
+    filter: none;
+
+    transform: scale(1.03);
+}
+
+
+/* Image captions */
+.gallery figcaption {
+    margin-top: 8px;
+
+    font-weight: bold;
+}
+
+
+/* Cheat sheet grid */
+.cheat-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* Cheat sheet cards */
+.cheat-grid article {
+    padding: 20px;
+
+    background-color: #f1f1f1;
+
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+
+/* Cheat sheet hover */
+.cheat-grid article:hover {
+    background-color: #dceeff;
+
+    transform: scale(1.03);
+}
+
+
+.cheat-grid h2 {
+    margin-bottom: 10px;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #222;
+
+    color: white;
+
+    line-height: 1.8;
+}
+
+
+/* Tablet layout */
+@media (max-width: 900px) {
+
+    .main-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Mobile layout */
+@media (max-width: 700px) {
+
+    /* Stack all main sections vertically */
+    .main-content {
+        grid-template-columns: 1fr;
+
+        padding: 25px 15px;
+    }
+
+    /* Stack navigation */
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    /* Gallery becomes one column */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cheat sheet becomes one column */
+    .cheat-grid {
+        grid-template-columns: 1fr;
+    }
+}

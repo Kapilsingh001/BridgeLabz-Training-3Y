@@ -1,0 +1,169 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page layout */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background-color: #222;
+    color: white;
+}
+
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+.navigation {
+    display: flex;
+    gap: 25px;
+}
+
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main section */
+main {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* Feature boxes */
+.features {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+    gap: 25px;
+}
+
+
+/* Individual feature box */
+.feature-box {
+    flex: 1;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Feature box heading */
+.feature-box h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Feature box paragraph */
+.feature-box p {
+    line-height: 1.6;
+}
+
+
+/* Hover effect */
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #222;
+    color: white;
+}
+
+
+/* Responsive layout */
+@media (max-width: 750px) {
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}
+
+
+/* Responsive header */
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
