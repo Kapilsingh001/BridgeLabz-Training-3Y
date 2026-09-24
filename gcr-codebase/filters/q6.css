@@ -1,0 +1,30 @@
+/* ========================================
+   QUESTION 6 - NOTIFICATIONS DASHBOARD
+   Custom CSS
+   ======================================== */
+
+
+/* Summary number styling */
+
+.summary-number {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* Summary well */
+
+.summary-well {
+    min-height: 180px;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 576px) {
+
+    .summary-well {
+        text-align: center;
+    }
+
+}

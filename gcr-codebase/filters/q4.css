@@ -1,0 +1,32 @@
+/* ========================================
+   QUESTION 4 - RESTAURANT MENU
+   Custom CSS
+   ======================================== */
+
+
+/* Food image */
+
+.food-image {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+/* Table styling */
+
+.table {
+    background-color: white;
+}
+
+
+/* Small responsive adjustment */
+
+@media (max-width: 576px) {
+
+    .food-image {
+        height: 250px;
+    }
+
+}
