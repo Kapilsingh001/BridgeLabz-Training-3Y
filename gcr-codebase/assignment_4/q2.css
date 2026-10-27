@@ -1,0 +1,77 @@
+
+/* Q2: Student Form Validator */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+}
+
+/* Green border for valid fields */
+input.valid {
+    border-color: green;
+}
+
+/* Red border for invalid fields */
+input.invalid {
+    border-color: red;
+}
+
+small {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    color: red;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#formMessage {
+    text-align: center;
+    font-weight: bold;
+}

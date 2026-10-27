@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Validation</title>
+    <link rel="stylesheet" href="q7.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login Form</h2>
+
+        <form id="loginForm" novalidate>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="At least 5 characters">
+            <small id="usernameError"></small>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <small id="passwordError"></small>
+
+            <button type="submit">Login</button>
+
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script src="q7.js"></script>
+</body>
+</html>
