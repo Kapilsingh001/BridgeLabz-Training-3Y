@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9 - Form Submit Blocker</title>
+    <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Q9 - Form Submit Blocker</h1>
+        <p>Invalid fields show inline errors. Errors disappear as you fix them.</p>
+
+        <!-- novalidate turns off browser popups so our own JS errors are shown -->
+        <form id="registerForm" novalidate>
+
+            <div class="form-group">
+                <label for="nameField">Name</label>
+                <input type="text" id="nameField">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="emailField">Email</label>
+                <input type="email" id="emailField">
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordField">Password</label>
+                <input type="password" id="passwordField">
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="successMessage">Form Submitted Successfully</div>
+    </div>
+
+    <script src="q9.js"></script>
+</body>
+</html>

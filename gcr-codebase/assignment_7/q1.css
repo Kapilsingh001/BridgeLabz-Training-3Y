@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2563eb;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.add-row {
+    display: flex;
+    gap: 10px;
+}
+
+.add-row input {
+    flex: 1;
+}
+
+#productList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#productList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #eeeeee;
+    border-radius: 5px;
+}
+
+#productList li.editing {
+    background: #fef9c3;
+}
+
+.product-name {
+    flex: 1;
+}
+
+.edit-input {
+    flex: 1;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+.error {
+    color: #dc2626;
+    font-size: 13px;
+}
