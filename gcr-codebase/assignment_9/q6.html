@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6 - Event Subscription Panel</title>
+    <link rel="stylesheet" href="q6.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q6 - Event Subscription Panel</h1>
+            <p>Manage notifications and subscription topics.</p>
+        </header>
+
+        <!-- Notification on/off -->
+        <section>
+            <h2>Notifications</h2>
+            <button id="subscribeButton">Subscribe</button>
+            <button id="unsubscribeButton">Unsubscribe</button>
+            <p id="notificationStatus" class="off">Notifications are DISABLED</p>
+        </section>
+
+        <!-- Topics -->
+        <section>
+            <h2>Subscription Topics</h2>
+            <div class="add-row">
+                <input type="text" id="topicInput" placeholder="New topic, e.g. Cloud Computing">
+                <button id="addTopicButton">Add Topic</button>
+            </div>
+
+            <ul id="topicList">
+                <li><span>Web Development</span><button class="notify-btn">Notify Me</button><button class="remove-btn">Remove</button></li>
+                <li><span>JavaScript Tips</span><button class="notify-btn">Notify Me</button><button class="remove-btn">Remove</button></li>
+                <li><span>Data Science</span><button class="notify-btn">Notify Me</button><button class="remove-btn">Remove</button></li>
+                <li><span>DevOps News</span><button class="notify-btn">Notify Me</button><button class="remove-btn">Remove</button></li>
+                <li><span>Career Updates</span><button class="notify-btn">Notify Me</button><button class="remove-btn">Remove</button></li>
+            </ul>
+        </section>
+
+        <!-- Messages are inserted here dynamically -->
+        <section id="messageArea" aria-live="polite"></section>
+
+        <footer>Built with jQuery .on() / .off()</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q6.js"></script>
+</body>
+</html>

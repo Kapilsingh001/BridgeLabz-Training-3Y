@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 - Welcome Page Greeting</title>
+    <link rel="stylesheet" href="q1.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q1 - Welcome Page Greeting</h1>
+            <p>A website that greets visitors dynamically using jQuery.</p>
+        </header>
+
+        <section>
+            <div class="name-row">
+                <input type="text" id="visitorName" value="Kapil" placeholder="Enter your name">
+                <button id="updateNameButton">Update Name</button>
+            </div>
+
+            <!-- Greeting text is filled by jQuery on page load -->
+            <h2 id="greeting" title="Click me!"></h2>
+            <p id="quote"></p>
+
+            <nav>
+                <button id="changeGreetingButton">Change Greeting</button>
+                <button id="toggleWelcomeButton">Hide Welcome Message</button>
+            </nav>
+
+            <article id="welcomeMessage">
+                <h3>Welcome to our website!</h3>
+                <p>Explore our courses, track your progress and learn something new every day.</p>
+            </article>
+        </section>
+
+        <footer>Built with jQuery</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q1.js"></script>
+</body>
+</html>

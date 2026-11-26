@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 - Interactive FAQ</title>
+    <link rel="stylesheet" href="q3.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q3 - Interactive FAQ</h1>
+            <p>Click a question to open it. Double-click any question to collapse all answers.</p>
+        </header>
+
+        <section id="faqList">
+
+            <article class="faq-item">
+                <h2 class="question">What is jQuery?</h2>
+                <div class="answer">
+                    <p>jQuery is a fast, small JavaScript library that makes DOM manipulation, events and animations easier.</p>
+                    <input type="text" placeholder="Was this helpful? Leave a comment...">
+                </div>
+            </article>
+
+            <article class="faq-item">
+                <h2 class="question">How do I include jQuery in my project?</h2>
+                <div class="answer">
+                    <p>Add a &lt;script&gt; tag pointing to the jQuery CDN before your own script file.</p>
+                    <input type="text" placeholder="Was this helpful? Leave a comment...">
+                </div>
+            </article>
+
+            <article class="faq-item">
+                <h2 class="question">What does $(document).ready() do?</h2>
+                <div class="answer">
+                    <p>It runs your code only after the HTML document has been fully loaded and parsed.</p>
+                    <input type="text" placeholder="Was this helpful? Leave a comment...">
+                </div>
+            </article>
+
+            <article class="faq-item">
+                <h2 class="question">What is the difference between .hide() and .slideUp()?</h2>
+                <div class="answer">
+                    <p>.hide() hides instantly (or with a size/opacity animation), while .slideUp() animates the height to zero.</p>
+                    <input type="text" placeholder="Was this helpful? Leave a comment...">
+                </div>
+            </article>
+
+            <article class="faq-item">
+                <h2 class="question">Can I use jQuery with modern JavaScript?</h2>
+                <div class="answer">
+                    <p>Yes. jQuery works alongside ES6+ features such as arrow functions, let/const and template literals.</p>
+                    <input type="text" placeholder="Was this helpful? Leave a comment...">
+                </div>
+            </article>
+
+        </section>
+
+        <footer>Tip: focus a comment box to highlight its question.</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q3.js"></script>
+</body>
+</html>

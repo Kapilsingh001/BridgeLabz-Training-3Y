@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - Team Members Directory</title>
+    <link rel="stylesheet" href="q5.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q5 - Team Members Directory</h1>
+            <p>
+                Click a <b>manager</b> to highlight their direct reports.
+                Hover an employee name for contact info.
+                Click a <b>department name</b> to color all its members.
+            </p>
+            <button id="randomEmployeeButton">Pick Random Employee</button>
+            <button id="clearButton">Clear Highlights</button>
+        </header>
+
+        <!-- Each department: name, collapse button and member list -->
+        <section class="department">
+            <h2 class="dept-name">Engineering</h2>
+            <button class="toggle-team">Collapse Team</button>
+            <ul class="members">
+                <li class="manager" data-manager-id="m1">
+                    <span class="emp-name">Anita Rao (Engineering Manager)</span><span class="contact">anita@company.com | Ext. 101</span>
+                </li>
+                <li class="employee" data-reports-to="m1">
+                    <span class="emp-name">Kapil</span><span class="contact">kapil@company.com | Ext. 102</span>
+                </li>
+                <li class="employee" data-reports-to="m1">
+                    <span class="emp-name">Rahul Mehta</span><span class="contact">rahul@company.com | Ext. 103</span>
+                </li>
+                <li class="employee" data-reports-to="m1">
+                    <span class="emp-name">Sneha Iyer</span><span class="contact">sneha@company.com | Ext. 104</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="department">
+            <h2 class="dept-name">Design</h2>
+            <button class="toggle-team">Collapse Team</button>
+            <ul class="members">
+                <li class="manager" data-manager-id="m2">
+                    <span class="emp-name">Vikram Singh (Design Lead)</span><span class="contact">vikram@company.com | Ext. 201</span>
+                </li>
+                <li class="employee" data-reports-to="m2">
+                    <span class="emp-name">Priya Verma</span><span class="contact">priya@company.com | Ext. 202</span>
+                </li>
+                <li class="employee" data-reports-to="m2">
+                    <span class="emp-name">Arjun Nair</span><span class="contact">arjun@company.com | Ext. 203</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="department">
+            <h2 class="dept-name">Marketing</h2>
+            <button class="toggle-team">Collapse Team</button>
+            <ul class="members">
+                <li class="manager" data-manager-id="m3">
+                    <span class="emp-name">Meera Kapoor (Marketing Head)</span><span class="contact">meera@company.com | Ext. 301</span>
+                </li>
+                <li class="employee" data-reports-to="m3">
+                    <span class="emp-name">Rohan Gupta</span><span class="contact">rohan@company.com | Ext. 302</span>
+                </li>
+                <li class="employee" data-reports-to="m3">
+                    <span class="emp-name">Ananya Reddy</span><span class="contact">ananya@company.com | Ext. 303</span>
+                </li>
+                <li class="employee" data-reports-to="m3">
+                    <span class="emp-name">Karan Malhotra</span><span class="contact">karan@company.com | Ext. 304</span>
+                </li>
+            </ul>
+        </section>
+
+        <footer id="statusText">Nothing selected yet.</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q5.js"></script>
+</body>
+</html>

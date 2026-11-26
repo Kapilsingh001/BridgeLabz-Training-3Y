@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 - Product Highlight</title>
+    <link rel="stylesheet" href="q2.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q2 - Product Highlight</h1>
+            <p>Click a product to highlight it, hover for details, and click the heart to mark it as a favorite.</p>
+        </header>
+
+        <section class="product-grid">
+
+            <!-- data-stock = units available, data-discount = discount % (only on some products) -->
+            <article class="product" data-stock="12" data-discount="20">
+                <span class="favorite">&#9829;</span>
+                <h3>Wireless Headphones</h3>
+                <span class="price">Rs.2,399</span><span class="old-price">Rs.2,999</span>
+                <p class="details">Bluetooth 5.3, 30-hour battery, noise cancellation.</p>
+            </article>
+
+            <article class="product" data-stock="5">
+                <span class="favorite">&#9829;</span>
+                <h3>Smart Watch</h3>
+                <span class="price">Rs.4,999</span>
+                <p class="details">Heart-rate monitor, GPS, water resistant up to 50m.</p>
+            </article>
+
+            <article class="product" data-stock="0" data-discount="10">
+                <span class="favorite">&#9829;</span>
+                <h3>Gaming Mouse</h3>
+                <span class="price">Rs.1,349</span><span class="old-price">Rs.1,499</span>
+                <p class="details">16000 DPI sensor, RGB lighting, 6 programmable buttons.</p>
+            </article>
+
+            <article class="product" data-stock="20">
+                <span class="favorite">&#9829;</span>
+                <h3>Mechanical Keyboard</h3>
+                <span class="price">Rs.3,499</span>
+                <p class="details">Blue switches, full-size layout, aluminium body.</p>
+            </article>
+
+            <article class="product" data-stock="0">
+                <span class="favorite">&#9829;</span>
+                <h3>Portable SSD 1TB</h3>
+                <span class="price">Rs.6,999</span>
+                <p class="details">USB-C, read speed up to 1050 MB/s.</p>
+            </article>
+
+            <article class="product" data-stock="8" data-discount="35">
+                <span class="favorite">&#9829;</span>
+                <h3>Laptop Backpack</h3>
+                <span class="price">Rs.1,299</span><span class="old-price">Rs.1,999</span>
+                <p class="details">Fits 15.6" laptops, water-resistant, USB charging port.</p>
+            </article>
+
+        </section>
+
+        <footer>Favorites selected: <span id="favoriteCount">0</span></footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q2.js"></script>
+</body>
+</html>

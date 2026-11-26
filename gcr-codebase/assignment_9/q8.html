@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8 - Dynamic Blog Posts</title>
+    <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q8 - Dynamic Blog Posts</h1>
+            <p>Admin panel for managing blog posts.</p>
+        </header>
+
+        <!-- Post controls -->
+        <section>
+            <h2>Manage Posts</h2>
+            <div class="form-row">
+                <input type="text" id="postTitle" placeholder="Post title">
+                <input type="text" id="postContent" placeholder="Post content">
+            </div>
+            <button id="addPostButton">Add New Post</button>
+            <button id="prependFeaturedButton">Prepend Featured Post</button>
+            <button id="removeLastButton">Remove Last Post</button>
+        </section>
+
+        <!-- Tag controls -->
+        <section>
+            <h2>Tags</h2>
+            <p class="hint">Click a post to select it, then add a tag before or after its title.</p>
+            <div class="form-row">
+                <input type="text" id="tagInput" placeholder="Tag name, e.g. Tutorial">
+            </div>
+            <button id="tagBeforeButton">Add Tag Before Title</button>
+            <button id="tagAfterButton">Add Tag After Title</button>
+        </section>
+
+        <!-- Keyword highlight -->
+        <section>
+            <h2>Keyword Highlight</h2>
+            <div class="form-row">
+                <input type="text" id="keywordInput" placeholder="Keyword, e.g. jQuery">
+            </div>
+            <p id="keywordResult" class="hint"></p>
+        </section>
+
+        <!-- Post list -->
+        <section id="postList">
+            <article class="post">
+                <h3>Getting Started with jQuery</h3>
+                <p>Learn how to select elements and handle events with jQuery.</p>
+            </article>
+            <article class="post">
+                <h3>CSS Grid vs Flexbox</h3>
+                <p>A practical comparison of two powerful CSS layout systems.</p>
+            </article>
+            <article class="post">
+                <h3>Understanding Promises</h3>
+                <p>How JavaScript promises make asynchronous code easier to read.</p>
+            </article>
+            <article class="post">
+                <h3>jQuery Animations</h3>
+                <p>Using fadeIn, slideUp and animate to bring pages to life.</p>
+            </article>
+            <article class="post">
+                <h3>Deploying to the Cloud</h3>
+                <p>Steps to deploy a static website using cloud hosting.</p>
+            </article>
+        </section>
+
+        <footer>Total posts: <span id="postCount">5</span></footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q8.js"></script>
+</body>
+</html>

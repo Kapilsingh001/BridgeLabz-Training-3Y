@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 40px 16px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px 4px 4px 0;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+#greeting {
+    padding: 20px;
+    background: #dbeafe;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#quote {
+    font-style: italic;
+    color: #374151;
+    min-height: 20px;
+}
+
+#welcomeMessage {
+    padding: 15px;
+    background: #dcfce7;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.name-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.name-row input {
+    flex: 1;
+}

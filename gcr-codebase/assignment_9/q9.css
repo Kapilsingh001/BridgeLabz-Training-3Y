@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 40px 16px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px 4px 4px 0;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+.widget {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.widget h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.widget.active {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #bfdbfe;
+}
+
+.carousel {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.slide:nth-child(1) { background: #2563eb; }
+.slide:nth-child(2) { background: #16a34a; }
+.slide:nth-child(3) { background: #9333ea; }
+.slide:nth-child(4) { background: #ea580c; }
+.slide:nth-child(5) { background: #dc2626; }
+
+/* Modal popup (managed by jQuery version 2) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 350px;
+    width: 90%;
+}
+
+/* Tooltip (managed by jQuery version 2) */
+.tooltip {
+    position: absolute;
+    background: #111827;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+[data-tooltip] {
+    border-bottom: 1px dashed #2563eb;
+    cursor: help;
+}
