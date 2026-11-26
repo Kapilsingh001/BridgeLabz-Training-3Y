@@ -1,0 +1,146 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page styling */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Main content */
+main {
+    flex: 1;
+
+    padding: 40px 25px;
+}
+
+
+/* Grid layout */
+.principles {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Principle boxes */
+.principle-box {
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* Box headings */
+.principle-box h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Definitions */
+.principle-box p {
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* Code examples */
+pre {
+    padding: 15px;
+
+    background-color: #eeeeee;
+
+    border-radius: 6px;
+
+    overflow-x: auto;
+}
+
+
+code {
+    font-family: Consolas, monospace;
+
+    font-size: 14px;
+}
+
+
+/* Hover effect */
+.principle-box:hover {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #222;
+
+    color: white;
+}
+
+
+/* Mobile layout */
+@media (max-width: 600px) {
+
+    .principles {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+}

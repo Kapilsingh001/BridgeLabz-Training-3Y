@@ -1,0 +1,246 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page styling */
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    color: #222;
+}
+
+
+/* Main dashboard Grid */
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    grid-template-rows: auto 1fr;
+}
+
+
+/* Header */
+.header {
+    grid-column: 1 / -1;
+
+    padding: 25px 30px;
+
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* Sidebar */
+.sidebar {
+    padding: 25px;
+
+    background-color: #333;
+
+    color: white;
+}
+
+
+.sidebar h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Sidebar navigation */
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.sidebar a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+
+/* Main content */
+.main-content {
+    padding: 30px;
+}
+
+
+/* Loading animation */
+.loading {
+    width: fit-content;
+
+    margin: 0 auto 25px;
+
+    padding: 10px 20px;
+
+    background-color: white;
+
+    border-radius: 6px;
+
+    animation: loadingPulse 1.2s ease-in-out infinite;
+}
+
+
+/* Cards grid */
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Individual cards */
+.card {
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.03);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Card heading */
+.card h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Card paragraph */
+.card p {
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* Card links */
+.card a {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background-color: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.card a:hover {
+    background-color: #555;
+}
+
+
+/* Loading keyframe animation */
+@keyframes loadingPulse {
+
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+
+/* Responsive layout below 750px */
+@media (max-width: 750px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto 1fr;
+    }
+
+
+    /* Sidebar moves above main content */
+    .sidebar {
+        order: 2;
+    }
+
+
+    /* Main content moves below sidebar */
+    .main-content {
+        order: 3;
+    }
+
+
+    /* Header remains at the top */
+    .header {
+        order: 1;
+    }
+
+
+    /* Sidebar links become horizontal */
+    .sidebar nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Cards stack vertically */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - Image Gallery</title>
+    <link rel="stylesheet" href="q5.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Q5 - Image Gallery with Modal</h1>
+        <p>Click any image to preview it. Click outside the image box to close.</p>
+
+        <div class="gallery" id="gallery">
+            <img src="https://picsum.photos/id/10/300/200" data-large="https://picsum.photos/id/10/900/600" alt="Forest">
+            <img src="https://picsum.photos/id/15/300/200" data-large="https://picsum.photos/id/15/900/600" alt="Waterfall">
+            <img src="https://picsum.photos/id/28/300/200" data-large="https://picsum.photos/id/28/900/600" alt="Jungle">
+            <img src="https://picsum.photos/id/29/300/200" data-large="https://picsum.photos/id/29/900/600" alt="Mountains">
+            <img src="https://picsum.photos/id/42/300/200" data-large="https://picsum.photos/id/42/900/600" alt="Cafe">
+            <img src="https://picsum.photos/id/58/300/200" data-large="https://picsum.photos/id/58/900/600" alt="Lighthouse">
+        </div>
+    </div>
+
+    <!-- Modal: overlay (outside area) + content box (inside area) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+            <img id="modalImage" src="" alt="">
+            <p id="modalCaption"></p>
+        </div>
+    </div>
+
+    <script src="q5.js"></script>
+</body>
+</html>

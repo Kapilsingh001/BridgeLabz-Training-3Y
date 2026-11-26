@@ -1,0 +1,61 @@
+/* ========================================
+   QUESTION 10 - TRAVEL AGENCY
+   Custom CSS
+   ======================================== */
+
+
+/* Carousel image */
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* Dark background behind carousel captions */
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+/* Booking section */
+
+.booking-section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Progress bar */
+
+.progress {
+    height: 30px;
+}
+
+
+/* Mobile responsive design */
+
+@media (max-width: 576px) {
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .carousel-caption {
+        padding: 8px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+
+}

@@ -1,0 +1,134 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f8fafc;
+    color: #1f2937;
+    line-height: 1.8;
+}
+
+/* Article header */
+header {
+    padding: 50px 10%;
+    background-color: #172554;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* Author and publication date */
+.subtitle {
+    max-width: 800px;
+    margin: 30px auto 20px;
+    padding: 15px;
+    text-align: center;
+    color: #475569;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Article container */
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px 60px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+}
+
+/* Consistent spacing between paragraphs */
+article p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/*
+   Style the first letter of every paragraph.
+   The first letter becomes larger and bold.
+*/
+article p::first-letter {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/*
+   Make the first line of every paragraph bold.
+*/
+article p::first-line {
+    font-weight: bold;
+}
+
+/*
+   Highlight important words using <mark>.
+*/
+mark {
+    background-color: #fde68a;
+    color: #713f12;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/*
+   Blockquote styling.
+   A left border and background color
+   make the quote stand out.
+*/
+blockquote {
+    margin: 35px 0;
+    padding: 25px 30px;
+
+    background-color: #eff6ff;
+
+    border-left: 6px solid #2563eb;
+
+    color: #1e3a8a;
+
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 5%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    article {
+        padding: 20px;
+        border: none;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}

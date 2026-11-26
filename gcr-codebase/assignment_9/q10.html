@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10 - Registration Form Validation</title>
+    <link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q10 - Registration Form</h1>
+            <p>Client-side validation with jQuery. Invalid fields get a red border.</p>
+        </header>
+
+        <section>
+            <!-- novalidate turns off the browser's own popups so jQuery handles validation -->
+            <form id="registrationForm" novalidate>
+
+                <div class="form-group">
+                    <label for="nameField">Full Name</label>
+                    <input type="text" id="nameField" placeholder="e.g. Kapil">
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailField">Email</label>
+                    <input type="email" id="emailField" placeholder="e.g. kapil@example.com">
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="passwordField">Password</label>
+                    <input type="password" id="passwordField" placeholder="Minimum 8 characters">
+                    <span class="error" id="passwordError"></span>
+                </div>
+
+                <button type="submit">Register</button>
+                <button type="reset" id="resetButton">Reset</button>
+            </form>
+
+            <p id="successMessage"></p>
+        </section>
+
+        <aside>
+            <h2>Already Registered Emails</h2>
+            <p id="registeredList"></p>
+        </aside>
+
+        <footer>Built with jQuery</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q10.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+/* Header */
+header {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background-color: #172554;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+
+    padding: 70px 5%;
+}
+
+/*
+   CSS Grid creates three equal columns.
+*/
+.pricing-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    /* Makes all cards equal height */
+    align-items: stretch;
+}
+
+/* Individual pricing card */
+.plan {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px 30px;
+
+    background-color: white;
+
+    border: 2px solid #d1d5db;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    /*
+       Transition makes the hover animation smooth.
+    */
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/*
+   Hover effect:
+   The card slightly enlarges and
+   changes its background color.
+*/
+.plan:hover {
+    transform: scale(1.05);
+
+    background-color: #eff6ff;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+/* Plan heading */
+.plan h2 {
+    margin-bottom: 20px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    color: #172554;
+}
+
+/* Price */
+.price {
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+.price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+/* Feature list */
+.plan ul {
+    flex: 1;
+
+    margin-bottom: 30px;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* Individual feature */
+.plan li {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 1rem;
+}
+
+/* Styled link used as a button */
+.button {
+    display: block;
+
+    padding: 12px 20px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+/* Button hover */
+.button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+/*
+   Highlight the Standard plan as the
+   most popular plan.
+*/
+.popular {
+    background-color: #f0f9ff;
+
+    border: 3px solid #2563eb;
+
+    border-style: double;
+
+    transform: translateY(-10px);
+}
+
+/* Keep the popular card enlarged when hovered */
+.popular:hover {
+    transform: translateY(-10px) scale(1.05);
+
+    background-color: #dbeafe;
+}
+
+/* Most Popular label */
+.popular-label {
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 6px 18px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #111827;
+    color: white;
+}
+
+/*
+   Responsive layout:
+   Below 700px, the cards stack vertically.
+*/
+@media (max-width: 700px) {
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: scale(1.03);
+    }
+
+    main {
+        padding: 50px 8%;
+    }
+}

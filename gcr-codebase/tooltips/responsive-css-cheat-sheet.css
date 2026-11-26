@@ -1,0 +1,177 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page styling */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Main content */
+main {
+    flex: 1;
+
+    padding: 40px 25px;
+}
+
+
+/* Cheat sheet grid */
+.cheat-sheet {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Individual cheat sheet boxes */
+.cheat-box {
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+}
+
+
+/* Box headings */
+.cheat-box h2 {
+    margin-bottom: 15px;
+
+    color: #222;
+}
+
+
+/* Box descriptions */
+.cheat-box p {
+    line-height: 1.6;
+}
+
+
+/* Code examples */
+code {
+    background-color: #eeeeee;
+
+    padding: 2px 5px;
+
+    border-radius: 4px;
+
+    font-family: monospace;
+}
+
+
+/* Hover effect */
+.cheat-box:hover {
+    transform: translateY(-5px);
+
+    background-color: #eef6ff;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+
+    .cheat-sheet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Small screens: stacked rows */
+@media (max-width: 700px) {
+
+    .cheat-sheet {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .cheat-box {
+        display: grid;
+
+        grid-template-columns: 120px 1fr;
+
+        gap: 15px;
+
+        align-items: start;
+
+        padding: 18px;
+    }
+
+    .cheat-box h2 {
+        margin-bottom: 0;
+    }
+
+    .cheat-box p {
+        margin: 0;
+    }
+}
+
+
+/* Very small screens */
+@media (max-width: 450px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .cheat-box {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #222;
+    color: white;
+}

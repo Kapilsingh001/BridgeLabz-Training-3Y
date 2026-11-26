@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.main-card {
+    width: min(90%, 600px);
+
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+.main-card h2 {
+    margin-top: 0;
+}
+
+.main-card img {
+    width: 220px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin: 15px 0 25px;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Focus effect */
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #333;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #222;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #ddd;
+    color: #222;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+button:focus {
+    outline: 2px solid #555;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .main-card {
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+}

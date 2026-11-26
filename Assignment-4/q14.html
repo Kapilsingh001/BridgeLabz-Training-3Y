@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration Form</title>
+</head>
+<body>
+
+    <h1>Event Registration Form</h1>
+
+    <form action="#" method="post">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+            <option value="" disabled selected>Select Event</option>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="webinar">Webinar</option>
+        </select>
+
+        <br><br>
+
+        <p>Attendance Type:</p>
+
+        <input type="radio" id="online" name="attendance" value="online" required>
+        <label for="online">Online</label>
+
+        <input type="radio" id="offline" name="attendance" value="offline">
+        <label for="offline">Offline</label>
+
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* =========================================================
+   BASIC PAGE STYLING
+   ========================================================= */
+
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+main {
+    padding: 40px 20px;
+}
+
+.box-model-section,
+.sizing-section {
+    max-width: 950px;
+    margin: 0 auto 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.box-model-section h2,
+.sizing-section h2 {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   BOX MODEL LAYERS
+   ========================================================= */
+
+/*
+    Margin layer:
+    Creates space outside the border.
+*/
+.margin-layer {
+    width: 430px;
+    height: 300px;
+    margin: 0 auto 35px;
+
+    padding: 25px;
+
+    background-color: #fef3c7;
+
+    /* Outline visually represents the margin area */
+    outline: 3px dashed #d97706;
+}
+
+/*
+    Border layer:
+    Surrounds the padding and content.
+*/
+.border-layer {
+    height: 100%;
+    padding: 20px;
+
+    background-color: #bfdbfe;
+
+    border: 15px solid #2563eb;
+}
+
+/*
+    Padding layer:
+    Creates space between the content and border.
+*/
+.padding-layer {
+    height: 100%;
+    padding: 30px;
+
+    background-color: #bbf7d0;
+}
+
+/*
+    Content layer:
+    Represents the actual content area.
+*/
+.content-layer {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border: 2px solid #166534;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   LAYER DESCRIPTIONS
+   ========================================================= */
+
+.descriptions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.descriptions article {
+    width: 200px;
+    padding: 15px;
+
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.descriptions h3 {
+    margin-bottom: 8px;
+}
+
+.descriptions p {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BOX-SIZING DEMONSTRATION
+   ========================================================= */
+
+.sizing-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Common styling */
+.sizing-box {
+    width: 250px;
+    height: 150px;
+
+    padding: 25px;
+    border: 10px solid #1f2937;
+
+    background-color: #dbeafe;
+
+    text-align: center;
+}
+
+/*
+    Default box-sizing:
+    content-box means the width does not include
+    padding and border.
+*/
+.default-box {
+    box-sizing: content-box;
+}
+
+/*
+    Border-box:
+    The declared width and height include
+    the padding and border.
+*/
+.border-box {
+    box-sizing: border-box;
+    background-color: #dcfce7;
+}
+
+.sizing-box h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}

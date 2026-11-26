@@ -1,0 +1,147 @@
+/* Apply border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Basic body styling */
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+
+    color: #1f2937;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header and footer */
+header,
+footer {
+    text-align: center;
+
+    padding: 22px;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+
+header p,
+footer p {
+    margin: 0;
+}
+
+
+/* Main tooltip container */
+.tooltip-container {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 70px;
+
+    flex-wrap: wrap;
+
+    padding: 60px 30px;
+}
+
+
+/* Individual icon */
+.tooltip-item {
+    position: relative;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* Tooltip */
+.tooltip-text {
+    position: absolute;
+
+    /* Place tooltip above the icon */
+    bottom: calc(100% + 12px);
+
+    /* Center tooltip horizontally */
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 180px;
+
+    padding: 10px;
+
+    border-radius: 7px;
+
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    /* Hide tooltip initially */
+    opacity: 0;
+
+    visibility: hidden;
+
+    /* Smooth fade effect */
+    transition: opacity 0.3s ease-in-out;
+
+    pointer-events: none;
+}
+
+
+/* Show tooltip when mouse hovers over icon */
+.tooltip-item:hover .tooltip-text {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* Footer */
+footer {
+    font-size: 14px;
+}
+
+
+/* Responsive design */
+@media (max-width: 700px) {
+
+    .tooltip-container {
+        gap: 35px;
+    }
+
+}

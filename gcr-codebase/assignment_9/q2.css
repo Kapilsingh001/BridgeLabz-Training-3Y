@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 40px 16px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px 4px 4px 0;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.product {
+    position: relative;
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product.highlight {
+    background-color: #fef9c3;
+}
+
+.product h3 {
+    margin: 0 0 8px;
+    padding-right: 30px;
+}
+
+.price {
+    font-weight: bold;
+    color: #047857;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #9ca3af;
+    margin-left: 6px;
+}
+
+/* Hidden extra details, shown on hover */
+.details {
+    display: none;
+    font-size: 13px;
+    color: #4b5563;
+    margin-top: 8px;
+}
+
+.favorite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 22px;
+    color: #9ca3af;
+    cursor: pointer;
+    user-select: none;
+}
+
+.favorite.selected {
+    color: #dc2626;
+}
+
+/* Added by jQuery to products that have a data-discount attribute */
+.discounted {
+    border-color: #f59e0b;
+}
+
+.discount-badge {
+    display: inline-block;
+    background: #f59e0b;
+    color: white;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+
+.out-of-stock {
+    opacity: 0.55;
+}
+
+.stock-label {
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: bold;
+}

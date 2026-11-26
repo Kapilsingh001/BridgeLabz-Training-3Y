@@ -1,0 +1,115 @@
+/* ========================================
+   QUESTION 5 - CUSTOM BOOTSTRAP THEME
+   ======================================== */
+
+
+/* ========================================
+   CUSTOM BOOTSTRAP THEME VARIABLES
+   ======================================== */
+
+:root {
+
+    /* Custom Bootstrap primary color */
+    --bs-primary: #6f42c1;
+
+    /* Custom font */
+    --bs-font-sans-serif: "Poppins", sans-serif;
+
+    /* Custom theme colors */
+    --bs-body-bg: #f8f7fc;
+    --bs-body-color: #212529;
+
+}
+
+
+/* ========================================
+   GENERAL STYLING
+   ======================================== */
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--bs-body-bg);
+}
+
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.custom-navbar {
+    background-color: #24143d;
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.blog-hero {
+    background: linear-gradient(
+        135deg,
+        #f0e9ff,
+        #ffffff
+    );
+}
+
+
+/* ========================================
+   BLOG CARDS
+   ======================================== */
+
+.blog-card {
+    border: none;
+    overflow: hidden;
+
+    /* Smooth transition */
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Card hover effect */
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Blog card images */
+
+.blog-card img {
+    height: 240px;
+    object-fit: cover;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+.about-section {
+    background-color: #ffffff;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.custom-footer {
+    background-color: #24143d;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 576px) {
+
+    .blog-card img {
+        height: 200px;
+    }
+
+}

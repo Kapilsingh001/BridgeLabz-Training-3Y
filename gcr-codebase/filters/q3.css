@@ -1,0 +1,37 @@
+/* ========================================
+   QUESTION 3 - PRODUCT CATALOG
+   Custom CSS
+   ======================================== */
+
+
+/* Product images */
+
+.product-image {
+    height: 220px;
+    object-fit: cover;
+}
+
+
+/* Product card */
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Hover effect using transition */
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Mobile screen adjustments */
+
+@media (max-width: 576px) {
+
+    .product-image {
+        height: 240px;
+    }
+
+}

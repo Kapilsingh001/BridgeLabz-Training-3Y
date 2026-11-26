@@ -1,0 +1,139 @@
+/* Body */
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+}
+
+
+/* Header and footer */
+header,
+footer {
+    text-align: center;
+
+    padding: 22px;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+
+header p,
+footer p {
+    margin: 0;
+}
+
+
+/* Main comparison area */
+.comparison {
+
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 40px 20px;
+}
+
+
+/* Common section styling */
+.box {
+
+    width: 380px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Default box section */
+.default-box {
+    background: #fee2e2;
+}
+
+
+/* Border-box section */
+.border-box {
+    background: #dcfce7;
+
+    box-sizing: border-box;
+}
+
+
+/* Demo boxes */
+.demo-box {
+
+    width: 300px;
+
+    padding: 30px;
+
+    border: 5px solid #1f2937;
+
+    background: white;
+
+    margin: 20px auto;
+
+    text-align: center;
+}
+
+
+/* Default box model */
+.default-box .demo-box {
+
+    box-sizing: content-box;
+}
+
+
+/* Border-box model */
+.border-box .demo-box {
+
+    box-sizing: border-box;
+}
+
+
+/* Paragraph */
+.box p {
+
+    line-height: 1.6;
+}
+
+
+/* Responsive design */
+@media (max-width: 800px) {
+
+    .comparison {
+
+        flex-direction: column;
+    }
+
+
+    .box {
+
+        width: min(90%, 380px);
+    }
+
+
+    .demo-box {
+
+        max-width: 100%;
+    }
+
+}

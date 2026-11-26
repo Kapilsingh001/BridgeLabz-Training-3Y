@@ -1,0 +1,82 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* Main section */
+main {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+/* Typography section */
+.typography-section {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive heading */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    margin-bottom: 25px;
+}
+
+
+/* Responsive paragraph */
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    line-height: 1.6;
+
+    margin: 0 auto;
+
+    max-width: 750px;
+}
+
+
+/* Improve readability on smaller screens */
+@media (max-width: 700px) {
+
+    .typography-section {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        margin-bottom: 18px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+}

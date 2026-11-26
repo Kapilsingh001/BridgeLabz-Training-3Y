@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+</head>
+
+<body>
+
+    <!-- Page Heading -->
+    <h1>Course Registration Form</h1>
+
+    <!-- Registration Form -->
+    <form>
+
+        <!-- Student Information -->
+        <fieldset>
+            <legend>Student Information</legend>
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <br><br>
+
+            <!-- Course Selection -->
+            <label for="course">Select Course:</label>
+
+            <select id="course" name="course">
+                <option value="">-- Select a Course --</option>
+                <option value="java">Java Programming</option>
+                <option value="python">Python Programming</option>
+                <option value="web">Web Development</option>
+                <option value="database">Database Management</option>
+                <option value="cloud">Cloud Computing</option>
+            </select>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Register">
+
+        </fieldset>
+
+    </form>
+
+    <br>
+
+    <!-- Course Schedule -->
+    <h2>Available Course Schedules</h2>
+
+    <table border="1">
+
+        <!-- Table Headings -->
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Instructor</th>
+        </tr>
+
+        <!-- Schedule 1 -->
+        <tr>
+            <td>Monday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Mr. Sharma</td>
+        </tr>
+
+        <!-- Schedule 2 -->
+        <tr>
+            <td>Tuesday</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Ms. Priya</td>
+        </tr>
+
+        <!-- Schedule 3 -->
+        <tr>
+            <td>Wednesday</td>
+            <td>11:00 AM - 1:00 PM</td>
+            <td>Mr. Verma</td>
+        </tr>
+
+        <!-- Schedule 4 -->
+        <tr>
+            <td>Friday</td>
+            <td>3:00 PM - 5:00 PM</td>
+            <td>Ms. Anjali</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
+

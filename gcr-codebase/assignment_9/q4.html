@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 - Special Offer Banner</title>
+    <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q4 - Special Offer Banners</h1>
+            <p>Choose a banner (or all) and apply an effect.</p>
+        </header>
+
+        <!-- Manual banner controls -->
+        <section>
+            <div class="controls">
+                <label for="bannerSelect">Target:</label>
+                <select id="bannerSelect">
+                    <option value="all">All banners</option>
+                    <option value="1">Banner 1 - Mega Sale</option>
+                    <option value="2">Banner 2 - Free Shipping</option>
+                    <option value="3">Banner 3 - Student Offer</option>
+                    <option value="4">Banner 4 - Festive Deals</option>
+                    <option value="5">Banner 5 - Flash Sale</option>
+                </select>
+                <br>
+                <button id="hideButton">Hide</button>
+                <button id="showButton">Show</button>
+                <button id="slideUpButton">Slide Up</button>
+                <button id="slideDownButton">Slide Down</button>
+                <button id="slideToggleButton">Slide Toggle</button>
+                <button id="fadeOutButton">Fade Out</button>
+                <button id="fadeInButton">Fade In</button>
+            </div>
+
+            <div id="bannerList">
+                <aside class="banner banner-1" data-banner="1">Mega Sale - 50% OFF<p>On all electronics this weekend.</p></aside>
+                <aside class="banner banner-2" data-banner="2">Free Shipping<p>On orders above Rs.499.</p></aside>
+                <aside class="banner banner-3" data-banner="3">Student Offer<p>Extra 10% off with a valid student ID.</p></aside>
+                <aside class="banner banner-4" data-banner="4">Festive Deals<p>Gifts starting at Rs.199.</p></aside>
+                <aside class="banner banner-5" data-banner="5">Flash Sale<p>Only for the next 2 hours!</p></aside>
+            </div>
+        </section>
+
+        <!-- Auto-rotating banner area -->
+        <section>
+            <h2>Auto-Rotating Banner (every 5 seconds)</h2>
+            <div id="rotator">
+                <aside class="banner banner-1">Mega Sale - 50% OFF<p>On all electronics this weekend.</p></aside>
+                <aside class="banner banner-2">Free Shipping<p>On orders above Rs.499.</p></aside>
+                <aside class="banner banner-3">Student Offer<p>Extra 10% off with a valid student ID.</p></aside>
+                <aside class="banner banner-4">Festive Deals<p>Gifts starting at Rs.199.</p></aside>
+                <aside class="banner banner-5">Flash Sale<p>Only for the next 2 hours!</p></aside>
+            </div>
+            <p id="rotatorStatus"></p>
+            <button id="rotationToggleButton">Pause Rotation</button>
+        </section>
+
+        <footer>Built with jQuery effects</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q4.js"></script>
+</body>
+</html>

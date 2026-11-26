@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2563eb;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.progress {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.progress span {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.progress span.active {
+    background: #2563eb;
+    color: white;
+}
+
+.progress span.done {
+    background: #16a34a;
+    color: white;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.step label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.step input {
+    width: 100%;
+}
+
+.error {
+    color: #dc2626;
+    font-size: 13px;
+    min-height: 18px;
+    margin: 6px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+#summary {
+    display: none;
+    padding: 15px;
+    background: #dcfce7;
+    border-radius: 5px;
+}

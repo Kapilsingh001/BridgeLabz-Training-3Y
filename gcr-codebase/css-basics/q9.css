@@ -1,0 +1,207 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    background-color: #e5e7eb;
+    color: #1f2937;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/*
+   Main newspaper container.
+   Padding creates space around the article.
+*/
+.newspaper {
+    max-width: 1200px;
+
+    margin: 40px auto;
+    padding: 40px 60px;
+
+    background-color: #fffdf5;
+
+    border: 1px solid #d1d5db;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/*
+   Main heading spans across all
+   three newspaper columns.
+*/
+.newspaper > h1 {
+    column-span: all;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-size: 3rem;
+    font-weight: 800;
+
+    color: #111827;
+}
+
+/* Subtitle */
+.subtitle {
+    column-span: all;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    color: #6b7280;
+}
+
+/*
+   Newspaper columns.
+   column-count creates three
+   vertical text columns.
+*/
+.article-content {
+    column-count: 3;
+
+    column-gap: 40px;
+
+    text-align: justify;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+/*
+   Section heading spans across
+   all three columns.
+*/
+.article-content h2 {
+    column-span: all;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #374151;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Paragraph spacing */
+.article-content p {
+    margin-bottom: 20px;
+}
+
+/*
+   Make the first paragraph's first letter
+   larger for a newspaper-style effect.
+*/
+.article-content p:first-of-type::first-letter {
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    float: left;
+
+    line-height: 0.9;
+
+    margin-right: 8px;
+}
+
+/*
+   Image aligned to the left using float.
+*/
+.article-image {
+    float: left;
+
+    width: 180px;
+    height: 130px;
+
+    margin: 0 18px 12px 0;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Footer */
+footer {
+    column-span: all;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 2px solid #374151;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    color: #6b7280;
+}
+
+/*
+   Responsive layout:
+   Use two columns on medium screens.
+*/
+@media (max-width: 900px) {
+
+    .newspaper {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .article-content {
+        column-count: 2;
+    }
+
+    .newspaper > h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/*
+   Responsive layout:
+   Use one column on small screens.
+*/
+@media (max-width: 600px) {
+
+    .newspaper {
+        margin: 0;
+        padding: 25px 20px;
+    }
+
+    .article-content {
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .newspaper > h1 {
+        font-size: 2rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .article-image {
+        width: 140px;
+        height: 100px;
+    }
+}

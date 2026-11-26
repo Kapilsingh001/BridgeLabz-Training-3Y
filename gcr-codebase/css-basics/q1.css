@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #172554;
+    color: white;
+    z-index: 1000;
+}
+
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    gap: 2em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding-top: 70px;
+}
+
+
+.hero {
+    min-height: 70vh;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5%;
+}
+
+
+.intro {
+    width: 55%;
+}
+
+
+.intro h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.profile {
+    width: 35%;
+    text-align: center;
+}
+
+
+.profile img {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #172554;
+}
+
+
+.about {
+    width: 80%;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #dbeafe;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.about h2,
+.contact h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #172554;
+}
+
+.about p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.contact {
+    width: 80%;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #e0f2fe;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact p {
+    font-size: 1rem;
+}
+
+
+footer {
+    min-height: 70px;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #172554;
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+        min-height: 70px;
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    main {
+        padding-top: 110px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro,
+    .profile {
+        width: 90%;
+    }
+
+    nav {
+        gap: 1em;
+    }
+}

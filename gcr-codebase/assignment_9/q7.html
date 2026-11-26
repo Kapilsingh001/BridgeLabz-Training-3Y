@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7 - Search Courses</title>
+    <link rel="stylesheet" href="q7.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q7 - Search Courses</h1>
+            <p>Type to filter courses in real time.</p>
+        </header>
+
+        <section>
+            <div class="search-row">
+                <input type="search" id="searchInput" placeholder="Search courses...">
+                <button id="clearButton">Clear</button>
+            </div>
+
+            <label>
+                <input type="checkbox" id="hideNonMatching" checked>
+                Hide courses that don't match
+            </label>
+
+            <p id="matchCount"></p>
+
+            <ul id="courseList">
+                <li><span class="course-title">HTML &amp; CSS Fundamentals</span><span class="category">Web</span></li>
+                <li><span class="course-title">JavaScript for Beginners</span><span class="category">Web</span></li>
+                <li><span class="course-title">Advanced JavaScript &amp; ES6</span><span class="category">Web</span></li>
+                <li><span class="course-title">jQuery Essentials</span><span class="category">Web</span></li>
+                <li><span class="course-title">Python Programming</span><span class="category">Programming</span></li>
+                <li><span class="course-title">Data Structures in Java</span><span class="category">Programming</span></li>
+                <li><span class="course-title">Cloud Computing with AWS</span><span class="category">Cloud</span></li>
+                <li><span class="course-title">DevOps and CI/CD Pipelines</span><span class="category">Cloud</span></li>
+                <li><span class="course-title">Machine Learning Basics</span><span class="category">Data</span></li>
+                <li><span class="course-title">SQL and Database Design</span><span class="category">Data</span></li>
+            </ul>
+            <p id="noCourses">No courses found.</p>
+        </section>
+
+        <footer>Built with jQuery .keyup() and .css()</footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q7.js"></script>
+</body>
+</html>

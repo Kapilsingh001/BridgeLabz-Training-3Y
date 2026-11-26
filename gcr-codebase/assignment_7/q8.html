@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8 - Custom Dropdown</title>
+    <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Q8 - Custom Dropdown</h1>
+        <p>Built without the &lt;select&gt; tag. Clicking outside closes it (capturing phase).</p>
+
+        <div class="dropdown" id="dropdown">
+            <button id="dropdownButton">Select a course</button>
+            <ul class="dropdown-options" id="dropdownOptions">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>Cloud and DevOps</li>
+            </ul>
+        </div>
+
+        <p id="selectedText">Selected: none</p>
+    </div>
+
+    <script src="q8.js"></script>
+</body>
+</html>

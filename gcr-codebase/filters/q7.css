@@ -1,0 +1,39 @@
+/* ========================================
+   QUESTION 7 - TASK TRACKER
+   Custom CSS
+   ======================================== */
+
+
+/* Pending task badge in header */
+
+.pending-badge {
+    font-size: 1.4rem;
+    padding: 10px 15px;
+}
+
+
+/* Make task items transition smoothly */
+
+.list-group-item {
+    transition: background-color 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* Mobile responsive styling */
+
+@media (max-width: 576px) {
+
+    .list-group-item .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+
+}

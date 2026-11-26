@@ -1,0 +1,115 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Fixed header stays at the top while scrolling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #1f2937;
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* Main content starts below the fixed header */
+main {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+/* Common styling for both gradient sections */
+section {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Linear gradient background */
+.linear-section {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed,
+        #db2777
+    );
+}
+
+/* Radial gradient background */
+.radial-section {
+    background: radial-gradient(
+        circle,
+        #f59e0b,
+        #ef4444,
+        #7f1d1d
+    );
+
+    /*
+        Fixed background creates a parallax-like effect.
+        The background remains fixed while the content scrolls.
+    */
+    background-attachment: fixed;
+}
+
+/* Content box inside each section */
+.content {
+    max-width: 650px;
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Fixed footer stays at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 10;
+}
+
+footer p {
+    font-size: 14px;
+}

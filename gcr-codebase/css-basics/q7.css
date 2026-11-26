@@ -1,0 +1,171 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+   Body uses flexbox to center
+   the contact form horizontally
+   and vertically.
+*/
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #e0f2fe;
+    color: #1f2937;
+}
+
+/* Main container */
+main {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Contact form */
+.contact-form {
+    padding: 40px;
+
+    background-color: white;
+
+    border: 2px solid #bae6fd;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Form heading */
+.contact-form h1 {
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-size: 2.2rem;
+    color: #0c4a6e;
+}
+
+/* Introductory text */
+.intro {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Individual form field */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #0c4a6e;
+}
+
+/*
+   Style all input fields and textarea.
+   Padding, border-radius and shadow
+   are used as required.
+*/
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+
+    background-color: #f8fafc;
+    color: #1f2937;
+
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/*
+   Change border color when
+   an input or textarea is focused.
+*/
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0284c7;
+
+    box-shadow: 0 0 8px rgba(2, 132, 199, 0.25);
+
+    background-color: white;
+}
+
+/* Prevent textarea from becoming too small */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #0284c7;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+    background-color: #0369a1;
+}
+
+/*
+   Responsive styling for smaller screens.
+*/
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-form h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9 - Multi-jQuery Widgets</title>
+    <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Q9 - Multi-jQuery Widgets</h1>
+            <p>
+                This dashboard loads <b>two jQuery versions</b> at the same time.
+                <span id="versionInfo"></span>
+            </p>
+        </header>
+
+        <section class="dashboard">
+
+            <!-- Widget 1: carousel (jQuery version 1) -->
+            <article class="widget">
+                <h2 data-tooltip="Slides change every 3 seconds (jQuery v1)">Carousel Slider</h2>
+                <div class="carousel">
+                    <div class="slide">Slide 1: New courses launched!</div>
+                    <div class="slide">Slide 2: 30% off on annual plans</div>
+                    <div class="slide">Slide 3: Live webinar this Friday</div>
+                    <div class="slide">Slide 4: Join our coding contest</div>
+                    <div class="slide">Slide 5: Download the mobile app</div>
+                </div>
+                <button id="prevSlide" data-tooltip="Previous slide">&lt; Prev</button>
+                <button id="nextSlide" data-tooltip="Next slide">Next &gt;</button>
+            </article>
+
+            <!-- Widget 2: notifications (jQuery version 2 modal) -->
+            <article class="widget">
+                <h2 data-tooltip="Opens a modal popup (jQuery v2)">Notifications</h2>
+                <button class="notify-btn" data-message="Your assignment has been graded: 95/100.">Grades</button>
+                <button class="notify-btn" data-message="New message from your mentor.">Messages</button>
+                <button class="notify-btn" data-message="Server maintenance tonight at 11 PM.">Alerts</button>
+            </article>
+
+            <!-- Widget 3: stats -->
+            <article class="widget">
+                <h2 data-tooltip="Click any widget to mark it active (jQuery v1)">Quick Stats</h2>
+                <p><span data-tooltip="Courses you are enrolled in">Courses: 6</span></p>
+                <p><span data-tooltip="Assignments submitted this month">Submitted: 9</span></p>
+                <p><span data-tooltip="Average score across all assignments">Average: 88%</span></p>
+            </article>
+
+        </section>
+
+        <footer id="activeWidgetText">Active widget: none</footer>
+    </main>
+
+    <!-- Modal popup (controlled by jQuery version 2) -->
+    <div class="modal-overlay" id="notificationModal">
+        <div class="modal-box">
+            <h3>Notification</h3>
+            <p id="modalMessage"></p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!--
+        5. Loading TWO jQuery versions with noConflict():
+        - Load version 1, then call jQuery.noConflict(true). This hands back the
+          global $ and jQuery names and stores version 1 in our own variable jqV1.
+        - Load version 2 and do the same, storing it in jqV2.
+        Now both versions live side by side without overwriting each other.
+    -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        var jqV1 = jQuery.noConflict(true);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        var jqV2 = jQuery.noConflict(true);
+    </script>
+
+    <script src="q9.js"></script>
+</body>
+</html>

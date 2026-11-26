@@ -1,0 +1,33 @@
+/* ========================================
+   QUESTION 2 - PERSONAL PORTFOLIO
+   Custom CSS
+   ======================================== */
+
+
+/* Profile image size */
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+/* Contact form maximum width */
+
+.contact-section {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Small hover effect for buttons */
+
+.btn {
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}

@@ -1,0 +1,148 @@
+/* Apply border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Basic body styling */
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    color: #1f2937;
+
+    background: #f8fafc;
+}
+
+
+/* Header and footer */
+header,
+footer {
+    text-align: center;
+
+    padding: 22px;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+
+header p,
+footer p {
+    margin: 0;
+}
+
+
+/* Main content */
+.content {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+}
+
+
+/* Individual sections */
+section {
+    background: white;
+
+    margin-bottom: 25px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================
+   ELEMENT SELECTOR
+   ===================================== */
+
+/* Selects every <p> element */
+p {
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   CLASS SELECTOR
+   ===================================== */
+
+/* Selects elements having class="highlight" */
+.highlight {
+    background: #fef3c7;
+
+    padding: 10px;
+}
+
+
+/* =====================================
+   ID SELECTOR
+   ===================================== */
+
+/* Selects the element having id="special" */
+#special {
+    font-weight: bold;
+
+    border-left: 4px solid #2563eb;
+
+    padding-left: 12px;
+}
+
+
+/* =====================================
+   ATTRIBUTE SELECTOR
+   ===================================== */
+
+/* Selects <a> elements that have an href attribute */
+a[href] {
+    color: #2563eb;
+}
+
+
+/* =====================================
+   DESCENDANT COMBINATOR
+   ===================================== */
+
+/* Selects every <p> inside .parent */
+.parent p {
+    background: #eff6ff;
+
+    padding: 8px;
+}
+
+
+/* =====================================
+   CHILD COMBINATOR
+   ===================================== */
+
+/* Selects only <p> elements that are
+   direct children of .parent */
+.parent > p {
+    border-left: 4px solid #16a34a;
+}
+
+
+/* =====================================
+   GENERAL SIBLING COMBINATOR
+   ===================================== */
+
+/* Selects all <li> elements that come
+   after the first <li> */
+.combinator-list li:first-child ~ li {
+    padding: 8px;
+
+    margin: 5px 0;
+
+    background: #fef3c7;
+}
